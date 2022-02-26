@@ -16,7 +16,7 @@ namespace ATM_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartScreen());
+            Application.Run(new Login());
         }
     }
 }

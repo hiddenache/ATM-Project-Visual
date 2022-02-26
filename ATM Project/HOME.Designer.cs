@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,6 +51,17 @@
             this.panel1.Size = new System.Drawing.Size(636, 77);
             this.panel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(605, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "X";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -63,17 +74,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Alege operatiunea";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(605, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "X";
             // 
             // button1
             // 
@@ -154,6 +154,7 @@
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "LOGOUT";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // HOME
             // 
@@ -170,6 +171,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HOME";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

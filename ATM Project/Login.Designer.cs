@@ -30,11 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AccNum = new System.Windows.Forms.TextBox();
+            this.PIN = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -44,6 +45,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -62,6 +64,20 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "BRD ATM - Versiune PC";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Roboto", 18F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(430, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 29);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "X";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -103,19 +119,19 @@
             this.label4.Text = "PINCODE";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // AccNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(206, 256);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 21);
-            this.textBox1.TabIndex = 5;
+            this.AccNum.Location = new System.Drawing.Point(206, 256);
+            this.AccNum.Name = "AccNum";
+            this.AccNum.Size = new System.Drawing.Size(169, 21);
+            this.AccNum.TabIndex = 5;
             // 
-            // textBox2
+            // PIN
             // 
-            this.textBox2.Location = new System.Drawing.Point(206, 310);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 21);
-            this.textBox2.TabIndex = 6;
+            this.PIN.Location = new System.Drawing.Point(206, 310);
+            this.PIN.Name = "PIN";
+            this.PIN.Size = new System.Drawing.Size(169, 21);
+            this.PIN.TabIndex = 6;
             // 
             // button1
             // 
@@ -125,9 +141,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Roboto", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(222, 348);
+            this.button1.Location = new System.Drawing.Point(98, 362);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 29);
+            this.button1.Size = new System.Drawing.Size(277, 29);
             this.button1.TabIndex = 7;
             this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,11 +154,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 9F);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(203, 418);
+            this.label5.Location = new System.Drawing.Point(210, 418);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 14);
             this.label5.TabIndex = 8;
             this.label5.Text = "Sign Up";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Login
             // 
@@ -152,8 +169,8 @@
             this.ClientSize = new System.Drawing.Size(470, 441);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PIN);
+            this.Controls.Add(this.AccNum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -177,9 +194,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AccNum;
+        private System.Windows.Forms.TextBox PIN;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

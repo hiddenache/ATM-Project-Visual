@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ATM_Project
 {
-    public partial class HOME : Form
+    public partial class ChangePIN : Form
     {
-        public HOME()
+        public ChangePIN()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,12 +20,38 @@ namespace ATM_Project
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
+            Cursor = Cursors.Hand;
         }
 
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\madal\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("select count(*) from AccountTbl where NrAcc = '"+ AccNum.Text +"' and PIN = "+PIN.Text+"", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
 
+            if(dt.Rows[0][0].ToString() == "1")
+            {
+                HOME home = new HOME();
+                home.Show();
+                this.Hide();
+                conn.Close();
+            } else
+            {
+                MessageBox.Show("Numar cont sau PIN gresit!");
+            }
+
+            conn.Close();
+        }
+
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
+            this.Hide();
         }
     }
 }
