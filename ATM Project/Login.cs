@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ATM_Project
 {
-    public partial class StartScreen : Form
+    public partial class Login : Form
     {
-        public StartScreen()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
