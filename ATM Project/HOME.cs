@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ATM_Project
 {
-    public partial class Login : Form
+    public partial class HOME : Form
     {
-        public Login()
+        public HOME()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
