@@ -37,6 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.NrCont = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.label2.Size = new System.Drawing.Size(19, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -89,6 +91,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Introducere numerar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -104,6 +107,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Schimba PIN";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -134,6 +138,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Interogare Sold";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
@@ -156,12 +161,26 @@
             this.label3.Text = "LOGOUT";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // NrCont
+            // 
+            this.NrCont.AutoSize = true;
+            this.NrCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NrCont.Font = new System.Drawing.Font("Roboto", 18F);
+            this.NrCont.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NrCont.Location = new System.Drawing.Point(208, 80);
+            this.NrCont.Name = "NrCont";
+            this.NrCont.Size = new System.Drawing.Size(142, 29);
+            this.NrCont.TabIndex = 3;
+            this.NrCont.Text = "Numar Cont";
+            this.NrCont.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // HOME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(636, 421);
+            this.Controls.Add(this.NrCont);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
@@ -173,6 +192,7 @@
             this.Name = "HOME";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
+            this.Load += new System.EventHandler(this.HOME_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,5 +211,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NrCont;
     }
 }

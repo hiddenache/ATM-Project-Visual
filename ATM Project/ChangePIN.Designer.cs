@@ -34,8 +34,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.newPIN = new System.Windows.Forms.TextBox();
+            this.confirmPIN = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -62,6 +62,7 @@
             this.label2.Size = new System.Drawing.Size(19, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -107,21 +108,21 @@
             this.panel2.Size = new System.Drawing.Size(624, 10);
             this.panel2.TabIndex = 18;
             // 
-            // textBox2
+            // newPIN
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.textBox2.Location = new System.Drawing.Point(316, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 21);
-            this.textBox2.TabIndex = 19;
+            this.newPIN.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.newPIN.Location = new System.Drawing.Point(316, 156);
+            this.newPIN.Name = "newPIN";
+            this.newPIN.Size = new System.Drawing.Size(136, 21);
+            this.newPIN.TabIndex = 19;
             // 
-            // textBox1
+            // confirmPIN
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.textBox1.Location = new System.Drawing.Point(316, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 21);
-            this.textBox1.TabIndex = 19;
+            this.confirmPIN.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.confirmPIN.Location = new System.Drawing.Point(316, 237);
+            this.confirmPIN.Name = "confirmPIN";
+            this.confirmPIN.Size = new System.Drawing.Size(136, 21);
+            this.confirmPIN.TabIndex = 19;
             // 
             // button1
             // 
@@ -137,6 +138,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label11
             // 
@@ -145,9 +147,10 @@
             this.label11.ForeColor = System.Drawing.Color.Maroon;
             this.label11.Location = new System.Drawing.Point(259, 340);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.Size = new System.Drawing.Size(39, 17);
             this.label11.TabIndex = 21;
-            this.label11.Text = "Logout";
+            this.label11.Text = "Back";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // ChangePIN
             // 
@@ -156,8 +159,8 @@
             this.ClientSize = new System.Drawing.Size(624, 370);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.confirmPIN);
+            this.Controls.Add(this.newPIN);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -181,8 +184,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox newPIN;
+        private System.Windows.Forms.TextBox confirmPIN;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
     }

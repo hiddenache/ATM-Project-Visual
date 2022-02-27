@@ -23,5 +23,39 @@ namespace ATM_Project
             login.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Balance balance = new Balance();
+            balance.Show();
+            this.Hide();
+        }
+
+        public static string AccNumber;
+
+        private void HOME_Load(object sender, EventArgs e)
+        {
+            NrCont.Text = "Account Number: " + Login.AccNumber;
+            AccNumber = Login.AccNumber;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Deposit deposit = new Deposit();
+            deposit.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChangePIN changePIN = new ChangePIN();
+            changePIN.Show();
+            this.Hide();
+        }
     }
 }

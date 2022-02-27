@@ -24,6 +24,8 @@ namespace ATM_Project
             Cursor = Cursors.Hand;
         }
 
+        public static String AccNumber;
+
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\madal\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,6 +36,7 @@ namespace ATM_Project
 
             if(dt.Rows[0][0].ToString() == "1")
             {
+                AccNumber = AccNum.Text;
                 HOME home = new HOME();
                 home.Show();
                 this.Hide();
@@ -52,6 +55,16 @@ namespace ATM_Project
             Account account = new Account();
             account.Show();
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccNum_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

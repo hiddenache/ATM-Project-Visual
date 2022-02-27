@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.NrCont = new System.Windows.Forms.Label();
+            this.SoldInRon = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -61,6 +61,7 @@
             this.label2.Size = new System.Drawing.Size(19, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -99,29 +100,29 @@
             this.label4.Text = "Sold:";
             this.label4.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label5
+            // NrCont
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 15F);
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(352, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 24);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "NrCont";
-            this.label5.Click += new System.EventHandler(this.label3_Click);
+            this.NrCont.AutoSize = true;
+            this.NrCont.Font = new System.Drawing.Font("Roboto", 15F);
+            this.NrCont.ForeColor = System.Drawing.Color.Maroon;
+            this.NrCont.Location = new System.Drawing.Point(352, 139);
+            this.NrCont.Name = "NrCont";
+            this.NrCont.Size = new System.Drawing.Size(73, 24);
+            this.NrCont.TabIndex = 12;
+            this.NrCont.Text = "NrCont";
+            this.NrCont.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
+            // SoldInRon
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 15F);
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(352, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "SoldInRon";
-            this.label6.Click += new System.EventHandler(this.label3_Click);
+            this.SoldInRon.AutoSize = true;
+            this.SoldInRon.Font = new System.Drawing.Font("Roboto", 15F);
+            this.SoldInRon.ForeColor = System.Drawing.Color.Maroon;
+            this.SoldInRon.Location = new System.Drawing.Point(352, 220);
+            this.SoldInRon.Name = "SoldInRon";
+            this.SoldInRon.Size = new System.Drawing.Size(99, 24);
+            this.SoldInRon.TabIndex = 12;
+            this.SoldInRon.Text = "SoldInRon";
+            this.SoldInRon.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
@@ -139,9 +140,10 @@
             this.label11.ForeColor = System.Drawing.Color.Maroon;
             this.label11.Location = new System.Drawing.Point(289, 303);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.Size = new System.Drawing.Size(39, 17);
             this.label11.TabIndex = 18;
-            this.label11.Text = "Logout";
+            this.label11.Text = "Back";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Balance
             // 
@@ -150,8 +152,8 @@
             this.ClientSize = new System.Drawing.Size(632, 344);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SoldInRon);
+            this.Controls.Add(this.NrCont);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
@@ -174,8 +176,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label NrCont;
+        private System.Windows.Forms.Label SoldInRon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
     }
