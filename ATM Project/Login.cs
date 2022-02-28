@@ -26,26 +26,33 @@ namespace ATM_Project
 
         public static String AccNumber;
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\madal\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Madalin\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("select count(*) from AccountTbl where NrAcc = '"+ AccNum.Text +"' and PIN = "+PIN.Text+"", conn);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-
-            if(dt.Rows[0][0].ToString() == "1")
+            if(AccNum.Text.Equals("") || PIN.Text.Equals(""))
             {
-                AccNumber = AccNum.Text;
-                HOME home = new HOME();
-                home.Show();
-                this.Hide();
-                conn.Close();
-            } else
-            {
-                MessageBox.Show("Numar cont sau PIN gresit!");
+                MessageBox.Show("Campurile NUME/PIN lipsesc!");
             }
+            else
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter("select count(*) from AccountTbl where NrAcc = '" + AccNum.Text + "' and PIN = " + PIN.Text + "", conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
 
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    AccNumber = AccNum.Text;
+                    HOME home = new HOME();
+                    home.Show();
+                    this.Hide();
+                    conn.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Numar cont sau PIN gresit!");
+                }
+            }
             conn.Close();
         }
 
@@ -65,6 +72,11 @@ namespace ATM_Project
         private void AccNum_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

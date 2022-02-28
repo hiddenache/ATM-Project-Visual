@@ -20,7 +20,7 @@ namespace ATM_Project
         }
 
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\madal\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Madalin\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -79,6 +79,11 @@ namespace ATM_Project
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Address_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

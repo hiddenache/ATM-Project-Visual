@@ -48,18 +48,20 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(624, 77);
+            this.panel1.Size = new System.Drawing.Size(832, 95);
             this.panel1.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(603, 9);
+            this.label2.Location = new System.Drawing.Point(804, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 19);
+            this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -68,34 +70,37 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Roboto", 20F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(187, 20);
+            this.label1.Location = new System.Drawing.Point(271, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 33);
+            this.label1.Size = new System.Drawing.Size(260, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "BRD - Versiune PC";
+            this.label1.Text = "BRD -  Schimba PIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 15F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(127, 234);
+            this.label4.Location = new System.Drawing.Point(169, 288);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 24);
+            this.label4.Size = new System.Drawing.Size(147, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "CONFIRM PIN:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.ForeColor = System.Drawing.Color.Maroon;
-            this.label3.Location = new System.Drawing.Point(127, 153);
+            this.label3.Location = new System.Drawing.Point(169, 188);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 24);
+            this.label3.Size = new System.Drawing.Size(102, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "NEW PIN:";
             // 
@@ -103,25 +108,28 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 360);
+            this.panel2.Location = new System.Drawing.Point(0, 443);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(624, 10);
+            this.panel2.Size = new System.Drawing.Size(832, 12);
             this.panel2.TabIndex = 18;
             // 
             // newPIN
             // 
-            this.newPIN.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.newPIN.Location = new System.Drawing.Point(316, 156);
+            this.newPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.newPIN.Location = new System.Drawing.Point(421, 192);
+            this.newPIN.Margin = new System.Windows.Forms.Padding(4);
             this.newPIN.Name = "newPIN";
-            this.newPIN.Size = new System.Drawing.Size(136, 21);
+            this.newPIN.Size = new System.Drawing.Size(180, 20);
             this.newPIN.TabIndex = 19;
             // 
             // confirmPIN
             // 
-            this.confirmPIN.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.confirmPIN.Location = new System.Drawing.Point(316, 237);
+            this.confirmPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.confirmPIN.Location = new System.Drawing.Point(421, 292);
+            this.confirmPIN.Margin = new System.Windows.Forms.Padding(4);
             this.confirmPIN.Name = "confirmPIN";
-            this.confirmPIN.Size = new System.Drawing.Size(136, 21);
+            this.confirmPIN.Size = new System.Drawing.Size(180, 20);
             this.confirmPIN.TabIndex = 19;
             // 
             // button1
@@ -130,11 +138,12 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(208, 290);
+            this.button1.Location = new System.Drawing.Point(277, 357);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 38);
+            this.button1.Size = new System.Drawing.Size(223, 47);
             this.button1.TabIndex = 20;
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;
@@ -143,9 +152,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Roboto", 10F);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label11.ForeColor = System.Drawing.Color.Maroon;
-            this.label11.Location = new System.Drawing.Point(259, 340);
+            this.label11.Location = new System.Drawing.Point(362, 422);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 17);
             this.label11.TabIndex = 21;
@@ -154,9 +164,9 @@
             // 
             // ChangePIN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 370);
+            this.ClientSize = new System.Drawing.Size(832, 455);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.confirmPIN);
@@ -166,9 +176,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChangePIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePIN";
+            this.Load += new System.EventHandler(this.ChangePIN_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

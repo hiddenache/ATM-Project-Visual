@@ -21,5 +21,10 @@ namespace ATM_Project
         {
 
         }
+
+        private void InterogareSold_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,5 +57,12 @@ namespace ATM_Project
             changePIN.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Retragere retragere = new Retragere();
+            retragere.Show();
+            this.Hide();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace ATM_Project
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\madal\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Madalin\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         private static string AccNum;
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +64,11 @@ namespace ATM_Project
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ChangePIN_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
