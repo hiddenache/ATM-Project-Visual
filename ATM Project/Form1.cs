@@ -19,7 +19,7 @@ namespace ATM_Project
         int start = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            start++;
+            start += 5;
 
             progressBar1.Value = start;
             Myprogress.Text = "" + start + "%";

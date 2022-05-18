@@ -35,7 +35,7 @@ namespace ATM_Project
 
         private void HOME_Load(object sender, EventArgs e)
         {
-            NrCont.Text = "Account Number: " + Login.AccNumber;
+            NrCont.Text = "Numar Cont: " + Login.AccNumber;
             AccNumber = Login.AccNumber;
         }
 
@@ -62,6 +62,13 @@ namespace ATM_Project
         {
             Retragere retragere = new Retragere();
             retragere.Show();
+            this.Hide();
+        }
+
+        private void tranzatiiAnterioareBTN_Click(object sender, EventArgs e)
+        {
+            Tranzactii t = new Tranzactii();
+            t.Show();
             this.Hide();
         }
     }

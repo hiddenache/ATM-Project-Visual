@@ -19,6 +19,25 @@ namespace ATM_Project
         }
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Madalin\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         string AccNum = HOME.AccNumber;
+
+        private void addTransaction()
+        {
+            string transactionType = "Deposit";
+            try
+            {
+                conn.Open();                                   // '"+AccNume.Text+"', '"+ +"'
+                string query = "insert into Transactions values('" + AccNum + "', '" + transactionType + "','" + soldDepozitat.Text + "', '" + DateTime.Today.Date.ToShortDateString() + "')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(soldDepozitat.Text == "" || Convert.ToInt32(soldDepozitat.Text) <= 0)
@@ -39,6 +58,7 @@ namespace ATM_Project
                     MessageBox.Show("Suma adaugata cu succes");
                     conn.Close();
 
+                    addTransaction();
                     HOME home = new HOME();
                     home.Show();
                     this.Hide();
@@ -49,7 +69,6 @@ namespace ATM_Project
                 }
             }
         }
-
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

@@ -49,6 +49,23 @@ namespace ATM_Project
             showSold();
         }
 
+        private void addTransaction(int baniRetrasi)
+        {
+            string transactionType = "Retragere";
+            try
+            {
+                conn.Open();                                   // '"+AccNume.Text+"', '"+ +"'
+                string query = "insert into Transactions values('" + HOME.AccNumber + "', '" + transactionType + "','" + baniRetrasi.ToString() + "', '" + DateTime.Today.Date.ToShortDateString() + "')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(sold < 100)
@@ -66,8 +83,13 @@ namespace ATM_Project
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
                 
-
+                    
                 conn.Close();
+                addTransaction(100);
+
+                HOME home = new HOME();
+                home.Show();
+                this.Hide();
             }
         }
 
@@ -98,8 +120,9 @@ namespace ATM_Project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-
                 conn.Close();
+
+                addTransaction(200);
             }
         }
 
@@ -119,9 +142,9 @@ namespace ATM_Project
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-
-
                 conn.Close();
+
+                addTransaction(250);
             }
         }
 
@@ -142,8 +165,9 @@ namespace ATM_Project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-
                 conn.Close();
+
+                addTransaction(500);
             }
         }
 
@@ -164,8 +188,9 @@ namespace ATM_Project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-
                 conn.Close();
+
+                addTransaction(700);
             }
         }
 
@@ -186,8 +211,8 @@ namespace ATM_Project
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-
                 conn.Close();
+                addTransaction(900);
 
                 HOME home = new HOME();
                 home.Show();
